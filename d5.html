@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>修改</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="kx.js"></script>
+    <style>
+        header, ul{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            /*background-color:#faebcc;*/
+
+        }
+
+        #video{
+            /*width:720px;*/
+            position:absolute;
+            /*width:1280px;*/
+            /*height:560px;*/
+
+        }
+        #container{
+            width:1280px;
+            height: 560px;
+            /*left:0;*/
+            /*top:0;*/
+            margin-left:180px;
+            margin-top:80px;
+            margin-bottom:50px;
+
+        }
+
+
+        #myCanvas{
+            border:1px solid #f50;
+            /*height:400px;*/
+        }
+        #result{
+            height:400px;
+            width:900px;
+            border: 2px solid #f50;
+        }
+
+        .mask,
+        .rect {
+            position: absolute;
+            /*position:fixed;*/
+        }
+
+        .mask {
+            background-color: #000;
+            opacity: 0;
+        }
+
+        .rect {
+            background-color: #fff;
+            opacity: 0.5;
+            border:1px dashed #f50;
+
+
+        }
+
+    </style>
+
+</head>
+<body>
+<header>
+    <h2>Video to GIF</h2>
+    <p>
+        <button id="start">Start Capture</button> &nbsp;
+        <button id="stop">Stop Capture</button>
+    </p>
+
+    <p>
+        <input disabled id="sample" type="range" step="1" min="20" max="500" value="100">
+        <button id="go" disabled>Do it!</button>
+    </p>
+    <p id="info">Loading...</p>
+</header>
+
+<div  id="container">
+    <video id="video"   controls  autoPlay ></video>
+</div>
+<!--<canvas id="canvas"></canvas>-->
+
+<header>
+    <div>
+        <canvas id="myCanvas"></canvas>
+    </div>
+
+    <p>
+        <input type="text" id="text" value="" >
+        <button id="btn" >提交</button>
+    </p>
+    <div>
+        <button id="record" >Start Recording</button>
+        <button id="play" disabled  >Play</button>
+        <button id="download" disabled>Download</button>
+    </div>
+</header>
+
+<ul>
+    <li>
+        <video id="recorder" controls height="400" ></video>
+    </li>
+
+    <li>
+        <p><img id="result" ></p>
+    </li>
+</ul>
+
+
+<script src="d5.js" ></script>
+<!--<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://imgss.github.io/demo/gif/gif.js"></script>
+<script src="video.js"></script>
+<script src="gif.js"></script>
+
+
+
+
+</body>
+
+</html>
