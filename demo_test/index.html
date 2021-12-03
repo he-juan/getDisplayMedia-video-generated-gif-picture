@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="kx.js"></script>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        #header{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        #videoContainer{
+            width:1280px;
+            height: 560px;
+            /*margin-left:180px;*/
+            /*margin-top:80px;*/
+            /*margin-bottom:50px;*/
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            /*display:none;*/
+            border: 1px solid #eeeeee;
+        }
+
+        #video{
+            position:absolute;
+        }
+
+        #canvasContainer{
+            width:800px;
+            height: 400px;
+            margin-left:150px;
+            margin-top:800px;
+            margin-bottom:50px;
+            /*position: absolute;*/
+            /*left: 0;*/
+            /*top: 0;*/
+            /*right: 0;*/
+            /*bottom: 0;*/
+            /*margin: auto;*/
+            /*display:none;*/
+            border: 1px solid #eeeeee;
+        }
+
+        #myCanvas{
+            border:1px solid #f50;
+            /*width:800px;*/
+            /*height: 400px;*/
+        }
+
+
+        .mask,
+        .rect {
+            position: absolute;
+            /*position:fixed;*/
+        }
+
+        .mask {
+            background-color: #000;
+            opacity: 0;
+        }
+
+        .rect {
+            background-color: #fff;
+            opacity: 0.5;
+            border:1px dashed #f50;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <button id="startScreen" onclick="startCapture()">开启共享</button>
+        <button id="stopScreen" onclick="stopCapture()">关闭共享</button>
+    </div>
+    <div  id="videoContainer">
+        <video id="video"></video>
+    </div>
+
+    <div id="canvasContainer">
+        <canvas id="myCanvas"></canvas>
+    </div>
+
+    <script type="text/javascript" src="index.js"> </script>
+</body>
+</html>
